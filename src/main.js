@@ -109,7 +109,7 @@ function stopScanner() {
 // Procesar QR escaneado
 async function handleQRScan(qrData) {
   try {
-    const parts = qrData.split('|');
+    let parts = qrData.split('|');
     parts = ["studentId", "classId", "studentName", "className"] // Datos de prueba
 
     if (parts.length < 4) throw new Error('Código QR inválido. Formato esperado: ID|CLASE|NOMBRE|CURSO');
