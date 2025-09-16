@@ -1,0 +1,83 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+  }
+  .scanner-container {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  #qr-video {
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 3px solid #4CAF50;
+  }
+  .success {
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+    animation: slideIn 0.5s ease-out;
+  }
+  .loading {
+    background: linear-gradient(45deg, #2196F3, #1976D2);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    animation: pulse 1s infinite;
+  }
+  @keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  .status-indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4CAF50;
+    display: inline-block;
+    margin-right: 10px;
+    animation: blink 1s infinite;
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+  input[type="email"], input[type="password"] {
+    width: 92%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  button[type="submit"], #logout-btn {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-size: 1em;
+  }
+  button[type="submit"]:hover, #logout-btn:hover {
+    background: linear-gradient(45deg, #764ba2, #667eea);
+  }
